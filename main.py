@@ -1,5 +1,4 @@
 from coffee_shop import CoffeeShop
-import errors
 
 shop = CoffeeShop()
 

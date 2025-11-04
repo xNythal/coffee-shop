@@ -10,4 +10,9 @@ def balance(shop: "CoffeeShop"):
     print(utils.style(f"Your balance is {money}", "bold", fg=(200, 150, 50)))
 
 
-COMMANDS = {"balance": balance, "money": balance}
+def quit(shop):
+    print("See you soon!")
+    exit()
+
+
+COMMANDS = {"balance": balance, "money": balance, "quit": quit}
