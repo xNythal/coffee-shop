@@ -6,8 +6,8 @@ class CoffeeShop:
     def __init__(self):
         self.balance = 0
 
-    def givemoney(self, amount: int):
-        self.balance += amount
+    def make_coffee(self):
+        self.balance += 10
 
     def process_command(self, command_str: str):
         parts = command_str.split()

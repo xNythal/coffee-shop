@@ -6,8 +6,12 @@ if TYPE_CHECKING:
 
 
 def balance(shop: "CoffeeShop"):
-    money = utils.style(f"${shop.balance}", fg=(0, 100, 0))
-    print(utils.style(f"Your balance is {money}", "bold", fg=(200, 150, 50)))
+    print(f"Your balance is ${shop.balance}")
+
+
+def make_coffee(shop: "CoffeeShop"):
+    shop.make_coffee()
+    print(f"Made one coffee for $10. Your balance is now ${shop.balance}")
 
 
 def quit(shop):
@@ -15,4 +19,9 @@ def quit(shop):
     exit()
 
 
-COMMANDS = {"balance": balance, "money": balance, "quit": quit}
+COMMANDS = {
+    "balance": balance,
+    "money": balance,
+    "quit": quit,
+    "make-coffee": make_coffee,
+}
